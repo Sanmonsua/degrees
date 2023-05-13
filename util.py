@@ -4,6 +4,8 @@ class Node():
         self.parent = parent
         self.action = action
 
+    def __str__(self):
+        return f'{self.state} ({self.action}) <- {self.parent}'
 
 class StackFrontier():
     def __init__(self):
