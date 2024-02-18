@@ -107,6 +107,9 @@ def shortest_path(source, target):
     """
         
     start = Node(state=source, parent=None, action=None)
+    if source == target:
+        return get_path_from_node(start)
+
     frontier = QueueFrontier()
     frontier.add(start)
 
